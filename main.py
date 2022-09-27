@@ -68,7 +68,15 @@ insert into Employee_Information values
 ("00003", "Samuel Green", "Department Manager", "M-F, 0700-1630", "Yes"),
 ("00004", "Jack Violet", "Cashier", "M-F, 0700-1630", "Yes");"""
 
+update_book = """
+update Book_Information
+set Price = "$100"
+where Title = "Harry Potter 1";"""
+
+delete_entry = """
+delete from Book_Information
+where title = "Harry Potter 2";"""
 
 # Callouts
 connection = create_server_connection("localhost", "root", "student", "Bookstore")
-execute_query(connection, employee_info)
+execute_query(connection, delete_entry)
