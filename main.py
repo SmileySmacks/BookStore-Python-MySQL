@@ -54,9 +54,21 @@ Position varchar(30) not null,
 Schedule varchar(30) not null,
 Benefits varchar(3) not null);"""
 
+book_info = """
+insert into Book_Information values
+(12, "Harry Potter 1", "Fantasy", "$35.00"),
+(17, "The Enemy", "Horror", "$40.00"),
+(46, "House of Scorpions", "Suspense", "$31.00"),
+(92, "Harry Potter 2", "Fantasy", "$39.00");"""
 
+employee_info = """
+insert into Employee_Information values
+("00001", "Mark White", "CEO", "M-F, 0700-1630", "Yes"),
+("00002", "Bob Blue", "Store Manager", "M-F, 0700-1630", "Yes"),
+("00003", "Samuel Green", "Department Manager", "M-F, 0700-1630", "Yes"),
+("00004", "Jack Violet", "Cashier", "M-F, 0700-1630", "Yes");"""
 
 
 # Callouts
 connection = create_server_connection("localhost", "root", "student", "Bookstore")
-execute_query(connection, create_table_employee_info)
+execute_query(connection, employee_info)
